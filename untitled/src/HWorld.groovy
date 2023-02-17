@@ -9,7 +9,8 @@ pipeline{
             }
             stage(' variable problem') {
                 steps {
-                    int var = 20
+
+                    step {int var = 20}
                      if(var<0){
 
                      echo 'number is less than Zero'
