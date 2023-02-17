@@ -1,3 +1,15 @@
+
+def dosomething() {
+    int var = 20
+    if(var<0){
+
+        echo 'number is less than Zero'
+    }
+    else{
+        echo ' number is greater than Zero'
+    }
+}
+
 pipeline{
         agent any
 
@@ -10,14 +22,7 @@ pipeline{
             stage(' variable problem') {
                 steps {
 
-                    step {int var = 20}
-                     if(var<0){
-
-                     echo 'number is less than Zero'
-                     }
-                    else{
-                         echo ' number is greater than Zero'
-                     }
+                    dosomething()
                 }
 
             }
